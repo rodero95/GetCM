@@ -91,9 +91,6 @@ class FetchBuild(object):
                         print "Running: %s" % download_cmd
                         os.system(download_cmd)
                         if (fname != "CHANGES.txt"):
-                            mirror_cmd = "ssh -p2200 root@mirror.sea.tdrevolution.net \"/root/add.sh /srv/mirror/jenkins/%s %s %s\"" % (build_number, artifact, fname)
-                            print "Running: %s" % mirror_cmd
-                            os.system(mirror_cmd)
                             addfile_cmd = "/usr/local/bin/getcm.addfile --timestamp %s --file /opt/www/mirror/jenkins/%s/%s --fullpath jenkins/%s/%s --type %s --config %s" % (timestamp, build_number, fname, build_number, fname, build_type, self.configPath)
                             print "Running: %s" % addfile_cmd
                             os.system(addfile_cmd)
