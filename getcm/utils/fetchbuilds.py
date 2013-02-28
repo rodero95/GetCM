@@ -23,7 +23,7 @@ class FetchBuild(object):
         init_database(create_engine(config.get('database', 'uri')))
 
     def get_builds(self):
-        url = "http://jenkins.cyanogenmod.com/job/android/api/json"
+        url = "http://jenkins.rodnet.es/job/android/api/json"
         data = urllib2.urlopen(url).read()
         data = json.loads(data)
 
@@ -48,7 +48,7 @@ class FetchBuild(object):
         result = []
         for artifact in data['artifacts']:
             if artifact['displayPath'].endswith(".zip") or artifact['displayPath'].endswith("CHANGES.txt"):  # and "NIGHTLY" in artifact['displayPath'] or "SNAPSHOT" in artifact['displayPath'] or "EXPERIMENTAL" in artifact['displayPath']:
-                url = "http://jenkins.cyanogenmod.com/job/android/%s/artifact/archive/%s" % (build['number'], artifact['displayPath'])
+                url = "http://jenkins.rodnet.es/job/android/%s/artifact/archive/%s" % (build['number'], artifact['displayPath'])
                 timestamp = (data['timestamp'] + data['duration']) / 1000
                 result.append((url, timestamp))
         return result
@@ -65,7 +65,7 @@ class FetchBuild(object):
                         continue
                     fileobj = File.get_by_fullpath(full_path)
                     if not fileobj:
-                        base = "artifacts/%s" % artifact.replace("http://jenkins.cyanogenmod.com/job/android/", "")
+                        base = "artifacts/%s" % artifact.replace("http://jenkins.rodnet.es/job/android/", "")
                         build_number = base.split("/")[1]
                         fname = base.split("/")[-1]
                         build_type = "stable"
