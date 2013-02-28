@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>CyanogenMod Downloads</title>
-<link>http://get.cm</link>
+<title>Rodnet CyanogenMod Downloads</title>
+<link>http://getcm.rodnet.es</link>
 <ttl>60</ttl>
-<description>CyanogenMod Downloads</description>
+<description>Rodnet CyanogenMod Downloads</description>
 % for file in files:
 % if file.info_hash:
 <item>
