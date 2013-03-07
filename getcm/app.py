@@ -52,9 +52,7 @@ class Application(tornado.web.Application):
         self.lookup = TemplateLookup(directories=[template_path], filesystem_checks=False)
 
         self.mirrorpool = WeightedChoice((
-            ('http://cloud1.rodnet.es/pub/cm/%s', 1000),
-            ('http://cloud2.rodnet.es/pub/cm/%s', 1000),
-            ('http://cloud3.rodnet.es/pub/cm/%s', 200),
+            ('http://cloud.rodnet.es/pub/cm/%s', 1000),
         ))
 
 
