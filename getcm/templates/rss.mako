@@ -9,10 +9,10 @@
 % if file.info_hash:
 <item>
     <title>${file.filename}</title>
-    <link>http://bacon.cyanogenmod.com/cm/torrents/${file.filename}.torrent</link>
-    <guid isPermaLink="true">http://bacon.cyanogenmod.com/cm/torrents/${file.filename}.torrent</guid>
+    <link>http://getcm.rodnet.es/cm/torrents/${file.filename}.torrent</link>
+    <guid isPermaLink="true">http://getcm.rodnet.es/cm/torrents/${file.filename}.torrent</guid>
     <pubDate>${file.date_created}</pubDate>
-    <enclosure url="http://bacon.cyanogenmod.com/cm/torrents/${file.filename}.torrent" type="application/x-bittorrent"/>
+    <enclosure url="http://getcm.rodnet.es/cm/torrents/${file.filename}.torrent" type="application/x-bittorrent"/>
 </item>
 % endif
 % endfor

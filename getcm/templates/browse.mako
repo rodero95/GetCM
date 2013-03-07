@@ -53,7 +53,7 @@
         &nbsp; <b>Direct Download</b>: 
         <a href="/get/${file.full_path}">${file.filename|h}</a>
         <br/>
-        <small class="md5">md5sum: ${file.md5sum|h} &nbsp;&nbsp;&nbsp;&nbsp; Short URL: <a href="http://get.cm/get/${file.base62}">http://get.cm/get/${file.base62}</a></small>
+        <small class="md5">md5sum: ${file.md5sum|h} &nbsp;&nbsp;&nbsp;&nbsp; Short URL: <a href="http://getcm.rodnet.es/get/${file.base62}">http://getcm.rodnet.es/get/${file.base62}</a></small>
       </td>
       <td>${file.human_size|h}</small></td>
       <td>${file.date_created|h}</td>
