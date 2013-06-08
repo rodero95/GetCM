@@ -56,7 +56,7 @@ def main():
                         help="URL of the file to download and add")
     parser.add_argument('--type',
                         dest='type',
-                        choices=['nightly', 'RC', 'stable', 'snapshot', 'test'],
+                        choices=['nightly', 'RC', 'stable', 'snapshot', 'test', 'kernel'],
                         required=True,
                         type=unicode,
                         help="Type of file")

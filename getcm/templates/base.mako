@@ -45,6 +45,7 @@
               <li id="type_snapshot"><a href="javascript:void(0)" onclick="navigate_type('snapshot')">M snapshot</a></li>
               <li id="type_nightly"><a href="javascript:void(0)" onclick="navigate_type('nightly')">nightly</a></li>
               <li id="type_test"><a href="javascript:void(0)" onclick="navigate_type('test')">experiments</a></li>
+              <li id="type_kernel"><a href="javascript:void(0)" onclick="navigate_type('kernel')">kernel</a></li>
             </ul>
           </div>
           <div class="well sidebar-nav">
