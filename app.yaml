@@ -1,0 +1,20 @@
+application: rodnet-cm
+version: 2-4-10-git-test1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  script: getcm/app.py
+
+- url: /static
+  static_dir: getcm/static
+
+- url: /(.*\.(gif|png|jpg))
+  static_files: getcm/static/\1
+  upload: getcm/static/(.*\.(gif|png|jpg))
+
+- url: /static/(.*\.(gif|png|jpg))
+  static_files: getcm/static/\1
+  upload: getcm/static/(.*\.(gif|png|jpg))
