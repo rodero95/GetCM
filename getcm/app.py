@@ -5,6 +5,7 @@ import os
 import tornado.web
 import tornado.httpserver
 import tornado.options
+import tornado.wsgi
 
 from ConfigParser import ConfigParser
 from tornado.options import define, options
